@@ -39,7 +39,7 @@
 
 				controls = new THREE.FirstPersonControls( camera );
 				controls.movementSpeed = 50;
-				controls.lookSpeed = 0.01;
+				controls.lookSpeed = 0.03;
 				var urls = [ 'posx.jpg', 'negx.jpg', 'posy.jpg', 'negy.jpg', 'posz.jpg', 'negz.jpg' ];
 				var loader = new THREE.CubeTextureLoader().setPath( 'js/' );
 				var background = loader.load( urls );
@@ -50,12 +50,12 @@
 				scene.add( light );
 
 				var axis = new THREE.AxesHelper(50);
-				scene.add(axis);
+				//scene.add(axis);
 
 				
 				var color = new THREE.Color("rgb(255, 0, 0)");
 				var grid = new THREE.GridHelper(500, 10, color, 0x000000);
-				scene.add(grid);
+				//scene.add(grid);
 				var mat = new THREE.MeshPhongMaterial( { color: 0xffffff, flatShading: true,transparent: true, opacity: 0 } );
 
 				var manager = new THREE.LoadingManager();
